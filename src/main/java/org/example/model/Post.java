@@ -3,6 +3,7 @@ package org.example.model;
 public class Post {
   private long id;
   private String content;
+  private boolean removed = false;
 
   public Post() {
   }
@@ -26,5 +27,13 @@ public class Post {
 
   public void setContent(String content) {
     this.content = content;
+  }
+
+  public void delete() {
+    this.removed = true;
+  }
+
+  public boolean deleted() {
+    return this.removed;
   }
 }
